@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-{% load static %}
+{% extends 'rango/base.html' %}
 
-<html>
+{% load staticfiles %}
 
-    <head>
-        <title>Computing Science~</title>
-    </head>
+{% block title %}About~{% endblock %}
 
-    <body>
-        <h1>Students say...</h1>
-        Run while you still can! <strong>{{ boldmessage}}</strong><br/>
-        <a href="/rango/">Index</a><br />
-	<img src="{% static "images/turnaround.jpg" %}" alt="It won't fucking work" />
-    </body>
+{% block body_block %}
+        <h1>Rango says...</h1>
+        This is the about page. <strong>{{ boldmessage }}</strong><br />
+        <img src="{% static "images/meee.jpg" %}" alt="Done by Sophie Ferns, 2086092f" /> <!-- New line -->
+    {% endblock %}
 
 </html>
