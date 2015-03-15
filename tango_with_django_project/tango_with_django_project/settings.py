@@ -34,7 +34,7 @@ TEMPLATE_DIRS = [
 ]
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['2086092f.pythonanywhere.com']
 
 # Application definition
 
