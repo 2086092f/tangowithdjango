@@ -1,0 +1,28 @@
+{% extends "rango/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Register with Rango~{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <h1>Register with Rango~</h1>
+    <br/>
+
+    <div class="container">
+       <form id="user_form" method="post" action="/rango/profile/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <!-- as_p makes everything purrty. -->
+            
+            {{ profile_form.as_p }}
+
+            <!-- Push the Button~~~ -->
+            <input type="submit" name="submit" value="Register" />
+        </form>
+        
+    </div>
+</div>
+{% endblock %}
