@@ -2,12 +2,16 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf.urls.static import static
+from django.contrib.auth.views import password_reset
+from django.contrib.auth import views as auth_views
+
+
 from registration.backends.simple.views import RegistrationView
 
 # Create a new class that redirects the user to the index page, if successful at logging
 class MyRegistrationView(RegistrationView):
     def get_success_url(self,request, user):
-        return '/rango/'
+        return '/rango/add_profile/'
 
 
 urlpatterns = patterns('',
