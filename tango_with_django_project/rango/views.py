@@ -80,6 +80,8 @@ def register_profile(request):
 
     return render(request, 'rango/index.html', context_dict)
 
+#profile stuff is mostly working through server
+#but giving an error through pythonanywhere
 @login_required
 def profile(request):
     context_dict = {}
